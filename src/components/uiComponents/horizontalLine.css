@@ -1,0 +1,8 @@
+.horizontalLine{
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    color: azure;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255), rgb(0, 0, 0));
+    
+}

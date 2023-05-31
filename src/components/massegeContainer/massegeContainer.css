@@ -1,0 +1,29 @@
+#searchResult{
+    display: block;
+    width: 53%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgb(74, 74, 74);
+    /* box-shadow: 5px 10px #2d2d2d; */
+    margin: 5px;
+    margin-right: 25px;
+    overflow: auto;
+
+}
+#searchResult h3{
+    color: rgb(103, 103, 103);
+}
+@media screen and (max-width: 768px) {
+    #searchResult {
+      display: block;
+      width: 80%;
+      height: 50vh;
+      margin: auto;
+    }
+    #currentTasks {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 480px) {
+  
+  }

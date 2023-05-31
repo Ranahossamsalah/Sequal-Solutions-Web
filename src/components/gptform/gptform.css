@@ -1,0 +1,119 @@
+/** @format */
+
+.boxUi {
+  border: 1px solid rgb(131, 131, 131);
+  border-radius: 12px;
+}
+.displayNone{
+  display: none;
+}
+.displayBlock{
+  display: inline-block;
+}
+#resultsUi {
+  display: flex;
+  width: 100%;
+  height: 45vh;
+  justify-content: center;
+}
+
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.form button {
+  width: 170px;
+  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: black;
+  color: grey;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.form button:hover {
+  background-color: rgb(177, 177, 177);
+  color: rgb(0, 0, 0);
+}
+
+.input {
+  width: 80%;
+  height: 50px;
+  background-color: rgba(87, 87, 87, 0.52);
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-top: 10px;
+  color: white;
+  padding-left: 15px;
+}
+.label {
+  display: inline-block;
+  background-color: gray;
+  width: 20%;
+  height: 50px;
+  background-color: rgba(87, 87, 87, 0.52);
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+#pleaseSignIn {
+  color: rgb(196, 185, 185);
+  background-color: rgba(165, 42, 42, 0.48);
+  font-size: 20px;
+  /* padding: 10px; */
+  text-align: center;
+  margin-top: 50px;
+ 
+}
+#pleaseSignIn:hover {
+  color: white;
+  background-color: rgb(165, 42, 42);
+  font-size: 20px;
+  /* padding: 10px; */
+  text-align: center;
+  margin-top: 50px;
+  cursor: pointer;
+  
+}
+#signInBtn{
+  background-color: rgb(122, 122, 122);
+  padding: 5px;
+  margin: 10px;
+  color: black;
+  border: 1px solid rgb(131, 131, 131);
+  border-radius: 12px;
+
+}
+#signInBtn:hover{
+  cursor: pointer;
+  background-color: azure;
+
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+  #resultsUi {
+    display: block;
+    width: 100%;
+    height: 60vh;
+    margin: auto;
+  }
+  #currentTasks {
+    width: 80%;
+    height: 45%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .form {
+    margin-top: 170px;
+  }
+}
+@media screen and (max-width: 480px) {
+}

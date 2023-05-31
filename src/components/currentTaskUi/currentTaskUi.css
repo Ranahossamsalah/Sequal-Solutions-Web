@@ -1,0 +1,25 @@
+
+  .currentTaskContainer{
+
+  }
+  .currentTaskContainer {
+    display: flex;
+    height: 20vh;
+  }
+  .currentTaskContainer a{
+    color:chocolate;
+  }
+  .currentTaskContainer a:hover{
+    color:rgb(199, 151, 151);
+  }
+  @media screen and (max-width: 1024px) {
+    .currentTaskContainer {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 768) {
+    /* .massageUiContainer {
+     
+    } */
+  }
+  

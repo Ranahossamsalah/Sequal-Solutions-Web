@@ -1,0 +1,24 @@
+#currentTasks {
+    display: block;
+    width: 24%;
+    height: 100%;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.66);
+    overflow: auto;
+  }
+  #currentTasks h3 {
+    color: grey;
+  }
+  @media screen and (max-width: 768px) {
+    #currentTasks {
+      display: block;
+      width: 80%;
+      height: 30vh;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+  }
+  @media screen and (max-width: 480px) {
+  
+  }

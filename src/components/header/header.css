@@ -1,0 +1,58 @@
+/** @format */
+
+.GPT-logo {
+  height: 20vmin;
+  pointer-events: none;
+  padding-right: 30px;
+  padding-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* fill: aliceblue; */
+}
+.header {
+  display: flex;
+  justify-content: center;
+  width: 85vw;
+  /* background-color: rgba(143, 145, 147, 0.368); */
+}
+#header_title {
+  padding-left: 50px;
+}
+#title {
+  padding-top: 40px;
+  font-size: 50px;
+  color: white;
+}
+#subTitle {
+  color: rgb(255, 255, 255);
+  /* font-size: 20px; */
+  text-align: center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .GPT-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .GPT-logo {
+    width: 100px;
+    height: 100px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  #title {
+    padding-top: 40px;
+    font-size: 30px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,7 @@
+.noPage{
+    background-image: url('../../pic/nopaage.jpg');
+    width:50%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:contain;
+}

@@ -1,0 +1,99 @@
+/** @format */
+/* #signInBg{
+  width: 100%;
+  background-image: url(../../pic/bg5.png);
+  opacity: 0.5;
+  z-index: -1;
+  position: relative;
+left: 0;
+} */
+
+
+#newAccount{
+  margin-left: 28%;
+
+  text-align: center;
+  color:chocolate;
+  list-style: none;
+}
+#newAccount:hover{
+  color:rgb(171, 171, 171);
+}
+#signInFormContainer {
+  width: 40%;
+  background-color: rgba(31, 27, 27, 0.746);
+  padding: 20px;
+  position: relative;
+  
+}
+
+#signInFormContainer::after,
+#signInFormContainer::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -7px;
+  right: -7px;
+  background: linear-gradient(48deg, rgb(4, 53, 137), rgb(91, 88, 86), rgb(161, 48, 17));
+  padding: 7px;
+  background-size: 100%;
+  /* animation: border 12s linear infinite; */
+}
+#signInFormContainer::after{
+  filter: blur(30px);
+
+}
+#signInFormContainer h2 {
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+}
+
+.signInForm div {
+  display: flex;
+  justify-content: center;
+}
+.signInForm div input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.418);
+  color: white;
+  border-radius: 10px;
+  padding-left: 40px;
+}
+#signInBtns button {
+    display: block;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(100, 100, 100);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    color: white;
+}
+#signInBtns button:hover{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.797);
+}
+@media screen and (max-width: 1200px) {
+  #signInFormContainer {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1024px) {
+
+
+}
+@media screen and (max-width: 768px) {
+
+  #signInFormContainer {
+    width: 80%;
+  }
+}
