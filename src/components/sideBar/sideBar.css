@@ -1,31 +1,36 @@
 /** @format */
-.visible{
+.visible {
   visibility: visible;
 }
-.notVisible{
+.notVisible {
   visibility: hidden;
-
 }
-.link{
+.link {
   color: white;
   text-decoration: none;
 }
-.searchHistory{
-text-align: center;
-  color: azure;
-margin-top: 50px;
-background-color: rgba(128, 128, 128, 0.574);
-padding: 15px;
-border-radius: 20px;
-width: 80%;
-margin: auto;
-margin-top:50px
+#name {
+  padding: 10px;
+  margin-top: 50px;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: rgba(165, 42, 42, 0.718);
 }
-.searchHistory:hover{
-  background-color: rgba(44, 44, 44, 0.916);
+.searchHistory {
+  text-align: center;
+  color: azure;
+  background-color: rgba(128, 128, 128, 0.574);
+  padding: 15px;
+  border-radius: 20px;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+.searchHistory:hover {
+  background-color: rgb(125, 125, 125);
   cursor: pointer;
 }
-#sideBarContainer{
+#sideBarContainer {
   width: 15%;
   text-align: right;
   position: relative;
@@ -37,91 +42,86 @@ margin-top:50px
   height: 0px;
 }
 
-#menueIconCliked{
+#menueIconCliked {
   width: 30px;
   height: 30px;
   position: absolute;
-  top:20px;
+  top: 20px;
   right: 5px;
 }
-#menueIconCliked:hover{
+#menueIconCliked:hover {
   background-color: rgb(87, 87, 87);
-border-radius: 5px;
-cursor: pointer;
+  border-radius: 5px;
+  cursor: pointer;
 }
-#menueIconNotCliked{
+#menueIconNotCliked {
   width: 30px;
   height: 30px;
   position: absolute;
-  top:20px;
+  top: 20px;
   left: 10px;
 }
-#menueIconNotCliked:hover{
+#menueIconNotCliked:hover {
   background-color: rgb(87, 87, 87);
-border-radius: 5px;
-cursor: pointer;
+  border-radius: 5px;
+  cursor: pointer;
 }
 #sideBar {
   width: 100%;
   display: inline-block;
   background-color: rgb(17, 17, 17);
   color: white;
-  height: 100vh;
+  height: 102vh;
   align-content: space-around;
-
 }
 
-#sideBar #settingList{
-    margin-bottom: 50px;
-    margin-top: 50px;
-    
+#sideBar #settingList {
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
-#sideBar #settingList li:hover{
-    background-color: rgba(59, 59, 59, 0.641);
-    cursor: pointer;
+#sideBar #settingList li:hover {
+  background-color: rgba(59, 59, 59, 0.641);
+  cursor: pointer;
 }
 #sideBar #settingList li {
-    margin: 10px;
+  margin: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20%;
   text-align: left;
   border-radius: 5px;
-
 }
 
-
-#sideBar #settingList li  img{
-  width:40px;
+#sideBar #settingList li img {
+  width: 40px;
   padding-right: 20px;
   text-align: center;
   align-content: center;
 }
-#sideBar #settingList li h3{
- display: inline;
+#sideBar #settingList li h3 {
+  display: inline;
 }
 #sideBar #socialMediaIcons {
-    
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   list-style-type: none;
-position: absolute;
-bottom: 5%;
-left: 10%;
+  /* position: absolute; */
+  bottom: 5%;
+  left: 10%;
 }
 
-#sideBar #socialMediaIcons li a img    {
-    padding-top: 30px;
-    width:30px;
+#sideBar #socialMediaIcons li a img {
+  padding-top: 30px;
+  width: 30px;
 }
-#sideBar #socialMediaIcons li a:hover{
+#sideBar #socialMediaIcons li a:hover {
   background-color: chocolate;
-border-radius: 10px;
+  border-radius: 10px;
 
   transition: 0.3s;
 }
 @media screen and (max-width: 1200px) {
-  #sideBarContainer{
+  #sideBarContainer {
     width: 25%;
     text-align: right;
     position: relative;
@@ -132,17 +132,16 @@ border-radius: 10px;
   }
 }
 @media screen and (max-width: 1024px) {
- 
-  #sideBar #settingList li h3{
+  #sideBar #settingList li h3 {
     display: block;
-   }
+  }
 
-  #sideBar #settingList li  imgv{
-    width:50px;
+  #sideBar #settingList li imgv {
+    width: 50px;
   }
 
   #sideBar #settingList li:hover {
-    background-color:rgba(63, 63, 63, 0.524);
+    background-color: rgba(63, 63, 63, 0.524);
   }
 }
 @media screen and (max-width: 768px) {
@@ -152,27 +151,25 @@ border-radius: 10px;
   #settingList a h3 {
     visibility: hidden;
   }
-  #sideBarContainer{
+  #sideBarContainer {
     width: 15%;
     text-align: right;
     position: relative;
     height: 100vh;
   }
 
-
-  #sideBar #socialMediaIcons li a img    {
-    width:20px;
-}
-#sideBar #settingList li  img{
-  width:45px;
-  padding-right: 20px;
-  text-align: center;
-  align-content: center;
-}
-#sideBar #socialMediaIcons li a img    {
-visibility: hidden;
-}
+  #sideBar #socialMediaIcons li a img {
+    width: 20px;
+  }
+  #sideBar #settingList li img {
+    width: 45px;
+    padding-right: 20px;
+    text-align: center;
+    align-content: center;
+  }
+  #sideBar #socialMediaIcons li a img {
+    visibility: hidden;
+  }
 }
 @media screen and (max-width: 480px) {
-
 }

@@ -13,16 +13,28 @@ import "./sideBar.css";
 import HorizontalLine from "../uiComponents/horizontalLine";
 
 function SideBar() {
+  const [reload, setreload] = useState(false);
   const [visiblility, setvisiblility] = useState("visible");
   const [clicked, setclicked] = useState(true);
   const [menueIconClickability, setmenueIconClickability] =
     useState("menueIconCliked");
+  const storageName = localStorage.getItem("name");
+  // const[userName,setuserName]=useState("");
+  // setuserName(storageName)
   const toggleMenue = () => {
     clicked ? setvisiblility("notVisible") : setvisiblility("visible");
     clicked
       ? setmenueIconClickability("menueIconNotCliked")
       : setmenueIconClickability("menueIconCliked");
     setclicked(!clicked);
+  };
+  
+  const signOut = () => {
+    if (reload == true) {
+      setreload(true);
+      window.location.reload();
+      localStorage.clear();
+    }
   };
 
   return (
@@ -36,36 +48,51 @@ function SideBar() {
         ></img>
 
         <div id="sideBar" className={visiblility}>
-        <Link to='/searchhistorycontainer'> <div className="searchHistory" >  Search Histoty</div></Link>
+          <div id="name">{storageName}</div>
+          <Link to="/searchhistorycontainer">
+            {" "}
+            <div className="searchHistory"> Search Histoty</div>
+          </Link>
 
           <ul id="settingList">
             <HorizontalLine />
             <li>
               {" "}
-            
               <Link to="/" className="link">
-                {" "}  <img src={homePic} alt="login"></img>
-               <h3>Home</h3> 
+                {" "}
+                <img src={homePic} alt="login"></img>
+                <h3>Home</h3>
               </Link>
             </li>
             <li>
               {" "}
-              
               <Link to="/signin" className="link">
-              <img src={loginPic} alt="login"></img>
-                {" "}
-                <h3>SignIn</h3>
+                <img src={loginPic} alt="login"></img> <h3>SignIn</h3>
               </Link>
             </li>
             <li>
               <img src={helpPic} alt="help"></img>
-              <a> <h3>Help</h3></a>
+              <a>
+                {" "}
+                <h3>Help</h3>
+              </a>
             </li>
             <li>
               <img src={supportPic} alt="support"></img>
-              <a>  <h3>Support</h3></a>
+              <a>
+                {" "}
+                <h3>Support</h3>
+              </a>
             </li>
           </ul>
+          <HorizontalLine />
+          <div
+            className="searchHistory"
+            // onclick={signOut}
+          >
+            {" "}
+            Sign Out{" "}
+          </div>
           <HorizontalLine />
           <ul id="socialMediaIcons" className="container">
             <li>

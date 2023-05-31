@@ -20,7 +20,7 @@ function SignIn() {
   const handleSubmit = (e) => {
     // e.preventDefault();
   };
-  let storageName = localStorage.getItem("name");
+
   let storageEmail = localStorage.getItem("email");
   let storagePassward = localStorage.getItem("passward");
 
@@ -32,7 +32,6 @@ function SignIn() {
   };
   const handleSignIn = (e) => {
     e.preventDefault();
-
     console.log(
       email,
       JSON.parse(storageEmail),
@@ -46,10 +45,12 @@ function SignIn() {
       console.log("authorized");
       setauthorization(true);
       dispatch(changeAuth(authorization));
-      settitle('Move To Home Page')
+      settitle("Move To Home Page");
       // console.log(authState);
-    } else 
-    alert('your email or passward is not right please re-enter your data also if you donot have an account  you can signup for a new accout');
+    } else
+      alert(
+        "your email or passward is not right please re-enter your data also if you donot have an account  you can signup for a new accout"
+      );
     console.log("notauthorized");
   };
   useEffect(() => {
@@ -73,7 +74,7 @@ function SignIn() {
 
           <div className="passward-wrapper my-2  ">
             <input
-              type="passward"
+              type="password"
               className="w-100"
               placeholder="passward"
               onChange={getPassward}

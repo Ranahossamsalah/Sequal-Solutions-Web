@@ -4,7 +4,7 @@
   }
   .currentTaskContainer {
     display: flex;
-    height: 20vh;
+    /* height: 20vh; */
   }
   .currentTaskContainer a{
     color:chocolate;
