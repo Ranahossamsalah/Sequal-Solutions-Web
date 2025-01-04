@@ -49,18 +49,50 @@ function Gptform() {
       dispatch(addDiscription(discription));
 
       console.log(userTextState);
-      // console.log(userDiscriptionState);
+      console.log(userDiscriptionState);
+      //     const options = {
+      //       method: "GET",
+      //       headers: {
+      //         "X-RapidAPI-Key":
+      //           "ae822103d0msh890010ddadace4ep14f398jsn814a473463bc",
+      //         "X-RapidAPI-Host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
+      //       },
+      //     };
+
+      //     await fetch(
+      //       `https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?q=${title}&pageNumber=1&pageSize=10&autoCorrect=true`,
+      //       options
+      //     )
+      //       .then((response) => response.json())
+      //       .then((response) => {
+      //         console.log(response);
+      //         newResponse = response;
+      //         console.log(newResponse);
+      //         dispatch(sucess(newResponse));
+      //         console.log(res);
+      //       })
+      //       .catch((err) => console.error(err));
+      //   } else {
+      //     {
+      //       setpleaseSignIn("please sign in to your accout");
+      //       setsignInVisibility("displayBlock");
+      //     }
+//
+//
+//
+      //https://rapidapi.com/neoscrap-net/api/google-search72/playground/apiendpoint_e7582fc8-c87f-4b32-9134-79bc0e570dd9
+
       const options = {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key":
+          "x-rapidapi-key":
             "ae822103d0msh890010ddadace4ep14f398jsn814a473463bc",
-          "X-RapidAPI-Host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
+          "x-rapidapi-host": "google-search72.p.rapidapi.com",
         },
       };
 
       await fetch(
-        `https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?q=${title}&pageNumber=1&pageSize=10&autoCorrect=true`,
+        `https://google-search72.p.rapidapi.com/search?q=word%20cup&lr=en-US&num=10`,
         options
       )
         .then((response) => response.json())
@@ -85,7 +117,7 @@ function Gptform() {
     <>
       <div id="resultsUi" className="container">
         <MassegeContainer />
-       <CurrentTaskContainer/>
+        <CurrentTaskContainer />
       </div>
       <div id="pleaseSignIn">
         <link to="/signin" />

@@ -6,6 +6,7 @@ import { Link, Outlet } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import authSlice, { changeAuth } from "../redux/slices/authSlice";
+import { addUserName } from "../redux/slices/usertextSlice";
 
 function SignIn() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ function SignIn() {
 
   let storageEmail = localStorage.getItem("email");
   let storagePassward = localStorage.getItem("passward");
+  let storageName = localStorage.getItem("name");
 
   const getEmail = (e) => {
     setemail(e.target.value);
@@ -46,6 +48,7 @@ function SignIn() {
       setauthorization(true);
       dispatch(changeAuth(authorization));
       settitle("Move To Home Page");
+      dispatch(addUserName(JSON.parse(storageName)))
       // console.log(authState);
     } else
       alert(

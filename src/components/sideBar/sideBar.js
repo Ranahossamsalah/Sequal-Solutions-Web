@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "./sideBar.css";
 import HorizontalLine from "../uiComponents/horizontalLine";
+import { useDispatch, useSelector } from "react-redux";
 
 function SideBar() {
   const [reload, setreload] = useState(false);
@@ -18,8 +19,11 @@ function SideBar() {
   const [clicked, setclicked] = useState(true);
   const [menueIconClickability, setmenueIconClickability] =
     useState("menueIconCliked");
-  const storageName = localStorage.getItem("name");
-  // const[userName,setuserName]=useState("");
+  // const dispatch = useDispatch();
+
+  const userNameState = useSelector((state) => state.usertextSlice.userName);
+  // const storageName = localStorage.getItem("name");
+  // const [userName, setuserName] = useState("");
   // setuserName(storageName)
   const toggleMenue = () => {
     clicked ? setvisiblility("notVisible") : setvisiblility("visible");
@@ -28,7 +32,7 @@ function SideBar() {
       : setmenueIconClickability("menueIconCliked");
     setclicked(!clicked);
   };
-  
+
   const signOut = () => {
     if (reload == true) {
       setreload(true);
@@ -48,7 +52,7 @@ function SideBar() {
         ></img>
 
         <div id="sideBar" className={visiblility}>
-          <div id="name">{storageName}</div>
+          <div id="name">{userNameState}</div>
           <Link to="/searchhistorycontainer">
             {" "}
             <div className="searchHistory"> Search Histoty</div>
@@ -93,7 +97,7 @@ function SideBar() {
             {" "}
             Sign Out{" "}
           </div>
-          <HorizontalLine />
+         
           <ul id="socialMediaIcons" className="container">
             <li>
               <a href="https://github.com/" target="_blank">
