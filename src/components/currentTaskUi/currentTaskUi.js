@@ -4,6 +4,7 @@ import React from "react";
 import "./currentTaskUi.css";
 import robot from "../../pic/robot.png";
 function CurrentTaskUi(props) {
+  
   return (
     <>
       <div className="currentTaskContainer">

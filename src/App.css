@@ -17,10 +17,18 @@ h1 {
   width: 80%;
   margin: auto;
 }
+.flex {
+  display: flex;
+}
+
 .App {
   /* z-index: -1; */
   /* background-color: #a0a0a083; */
+  width: 100vw;
+  background-repeat: no-repeat;
   width: 100%;
+  background-size: cover;
+  filter: grayscale(25%);
 }
 
 .App-components {
@@ -28,12 +36,13 @@ h1 {
   /* justify-content: space-around; */
   flex: 1;
 }
+
 @media screen and (max-width: 768) {
   body,
   * {
     font-size: 12px;
     color: rgb(22, 21, 21);
-  };
+  }
   .App {
     z-index: -1;
     background-color: #a0a0a083;

@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { addDiscription, addUserText } from "../redux/slices/usertextSlice";
 import { sucess } from "../redux/slices/usertextSlice";
 import CurrentTaskContainer from "../currentTaskContainer/currentTaskContainer";
+import { start } from "../redux/slices/usertextSlice";
 
 function Gptform() {
   const dispatch = useDispatch();
@@ -47,7 +48,7 @@ function Gptform() {
     if (authState == true) {
       dispatch(addUserText(title));
       dispatch(addDiscription(discription));
-
+      dispatch(start());
       console.log(userTextState);
       console.log(userDiscriptionState);
       //     const options = {
@@ -77,9 +78,9 @@ function Gptform() {
       //       setpleaseSignIn("please sign in to your accout");
       //       setsignInVisibility("displayBlock");
       //     }
-//
-//
-//
+      //
+      //
+      //
       //https://rapidapi.com/neoscrap-net/api/google-search72/playground/apiendpoint_e7582fc8-c87f-4b32-9134-79bc0e570dd9
 
       const options = {
@@ -92,7 +93,7 @@ function Gptform() {
       };
 
       await fetch(
-        `https://google-search72.p.rapidapi.com/search?q=word%20cup&lr=en-US&num=10`,
+        `https://google-search72.p.rapidapi.com/search?q=${title}&lr=en-US&num=10`,
         options
       )
         .then((response) => response.json())
@@ -129,7 +130,7 @@ function Gptform() {
       </div>
 
       <form className="container form">
-        <label for="Category" className="boxUi label">
+        <label for="Category" className="boxUi label flex">
           Title
         </label>
         <input
@@ -139,6 +140,7 @@ function Gptform() {
           placeholder="Category..."
           onChange={addTitle}
         />
+
         <label for="goal" className="boxUi label">
           Discription
         </label>

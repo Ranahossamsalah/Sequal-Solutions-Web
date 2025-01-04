@@ -7,7 +7,7 @@ import SideBar from "./components/sideBar/sideBar";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignIn from "./components/signIn/signIn";
-
+import background from'./pic/bg6.png'
 import Register from "./components/register/register";
 import SearchHistory from "./components/searchHistoryContainer/searchHistoryContainer";
 import SearchHistoryContainer from "./components/searchHistoryContainer/searchHistoryContainer";
@@ -52,7 +52,7 @@ function App() {
 // 	console.error(error);
 // }
   return (
-    <div className="App">
+    <div className="App" style={{backgroundImage:`url(${background}`}}   >
       <div className="App-components">
         
         <BrowserRouter>

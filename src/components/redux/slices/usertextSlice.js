@@ -32,7 +32,7 @@ const usertextSlice = createSlice({
      
       // state.userText = action.payload.text;
       // state.userdiscription = action.payload.disc;
-      // state.loading = null;
+      state.loading = null;
     },
     error: (state, action) => {
       state.loading = false;
