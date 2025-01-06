@@ -2,7 +2,7 @@
 // import background from'../../pic/bg5.png'
 import React, { useEffect, useState } from "react";
 import "./signIn.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Navigate, Outlet, useNavigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import authSlice, { changeAuth } from "../redux/slices/authSlice";
@@ -21,7 +21,7 @@ function SignIn() {
   const handleSubmit = (e) => {
     // e.preventDefault();
   };
-
+  const navigate = useNavigate();
   let storageEmail = localStorage.getItem("email");
   let storagePassward = localStorage.getItem("passward");
   let storageName = localStorage.getItem("name");
@@ -32,7 +32,7 @@ function SignIn() {
   const getPassward = (e) => {
     setpassward(e.target.value);
   };
-  const handleSignIn = (e) => {
+  const handleSignIn = async(e) => {
     e.preventDefault();
     console.log(
       email,
@@ -46,9 +46,10 @@ function SignIn() {
     ) {
       console.log("authorized");
       setauthorization(true);
-      dispatch(changeAuth(authorization));
-      settitle("Move To Home Page");
-      dispatch(addUserName(JSON.parse(storageName)))
+      await dispatch(changeAuth(authorization));
+      await settitle("Move To Home Page");
+      dispatch(addUserName(JSON.parse(storageName)));
+      setTimeout (navigate("/"),5000)
       // console.log(authState);
     } else
       alert(
@@ -88,7 +89,9 @@ function SignIn() {
             <button onClick={handleSignIn} type="submit">
               Sign In
             </button>
-            <button type="submit">Register</button>
+            <Link to="/register">
+              <button type="submit">Register</button>
+            </Link>
           </div>
 
           <Link to="/register" id="newAccount">

@@ -13,10 +13,11 @@
   width: 80%;
   margin: auto;
 }
-#searchPage h2{
+#searchPage h2 ,#searchPage h3{
     font-size: 30px;
     text-align: center;
     padding: 10px;
+    color: white;
 }
 #searchPage h3{
   font-size: 15px;

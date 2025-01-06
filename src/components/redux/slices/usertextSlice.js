@@ -14,7 +14,7 @@ const usertextSlice = createSlice({
   },
   reducers: {
     addUserText(state, action) {
-      state.userText.push(action.payload);
+      state.userText.push(action.payload); 
   
     },
     addDiscription(state, action) {

@@ -231,7 +231,7 @@ function Register() {
           <button onClick={handleRegister} type="submit">
             Register
           </button>
-          <button type="submit"> Sign In</button>
+          <Link to="/signin" > <button type="submit"> Sign In</button></Link>
         </div>
       </form>
       <Link to="/signin" id="moveToSignIn">

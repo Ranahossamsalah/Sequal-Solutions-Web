@@ -32,9 +32,9 @@
 }
 #sideBarContainer {
   width: 15%;
-  text-align: right;
-  position: relative;
-  height: 100vh;
+  /* text-align: right; */
+  /* position: relative; */
+  /* height: 100vh; */
 }
 
 #sideBarContainer button {
@@ -67,11 +67,12 @@
   cursor: pointer;
 }
 #sideBar {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  display: inline-block;
-  background-color: rgb(17, 17, 17);
+  /* display: inline-block; */
+  /* background-color: rgb(17, 17, 17); */
   color: white;
-  height: 101%;
   align-content: space-around;
 }
 
@@ -145,6 +146,12 @@
   }
 }
 @media screen and (max-width: 768px) {
+  #sideBar {
+    flex-direction: row;
+    align-content: center;
+    justify-content: left;
+  }
+  
   #settingList .link h3 {
     visibility: hidden;
   }
@@ -152,12 +159,16 @@
     visibility: hidden;
   }
   #sideBarContainer {
+    flex-direction: row;
     width: 15%;
     text-align: right;
-    position: relative;
+    /* position: relative; */
     height: 100vh;
   }
-
+  #sideBar #settingList{
+    display: flex;
+    list-style: none;
+  }
   #sideBar #socialMediaIcons li a img {
     width: 20px;
   }
@@ -172,4 +183,7 @@
   }
 }
 @media screen and (max-width: 480px) {
+  #sideBar {
+    flex-direction: row;
+  }
 }

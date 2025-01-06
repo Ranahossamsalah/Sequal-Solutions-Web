@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { Ring } from "react-awesome-spinners";
 
 function MassegeContainer() {
-  const responseData = useSelector((state) => state.usertextSlice.response);
+  const responseData = useSelector((state) => state.usertextSlice.response); 
   console.log(responseData);
   const loading = useSelector((state) => state.usertextSlice.loading);
   return (

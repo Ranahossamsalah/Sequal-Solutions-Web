@@ -52,7 +52,7 @@ function SideBar() {
         ></img>
 
         <div id="sideBar" className={visiblility}>
-          <div id="name">{userNameState}</div>
+          <div id="name"> {userNameState?userNameState:" Hi, Guest"}</div>
           <Link to="/searchhistorycontainer">
             {" "}
             <div className="searchHistory"> Search Histoty</div>
@@ -62,7 +62,7 @@ function SideBar() {
             <HorizontalLine />
             <li>
               {" "}
-              <Link to="/" className="link">
+              <Link to="/" className="link flex" >
                 {" "}
                 <img src={homePic} alt="login"></img>
                 <h3>Home</h3>
@@ -70,18 +70,18 @@ function SideBar() {
             </li>
             <li>
               {" "}
-              <Link to="/signin" className="link">
+              <Link to="/signin" className="link flex">
                 <img src={loginPic} alt="login"></img> <h3>SignIn</h3>
               </Link>
             </li>
-            <li>
+            <li className="flex" >
               <img src={helpPic} alt="help"></img>
               <a>
                 {" "}
                 <h3>Help</h3>
               </a>
             </li>
-            <li>
+            <li className="flex">
               <img src={supportPic} alt="support"></img>
               <a>
                 {" "}

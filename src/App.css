@@ -20,6 +20,7 @@ h1 {
 .flex {
   display: flex;
 }
+a{text-decoration: none;}
 
 .App {
   /* z-index: -1; */
